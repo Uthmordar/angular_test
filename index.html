@@ -3,13 +3,17 @@
 <head>
 	<title>Angular_test</title>
 	<meta charset="UTF-8">
+		<script src="bower_components/angularjs/angular.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/controllers/password.controller.js"></script>
+	<script src="app/filters/upperCase.filter.js"></script>
 </head>
 <body ng-app="angular_test">
 	<form ng-controller="passwordController">
 		<input type="password" ng-model="password" ng-change="grade()"> your password is {{strength}}
 	</form>
-	<script src="bower_components/angularjs/angular.js"></script>
-	<script src="app/app.js"></script>
-	<script src="app/controllers/password.controller.js"></script>
+	<div>
+		<input type="text" ng-model="message"/>{{ message | upperCase }}
+	</div>
 </body>
 </html>
